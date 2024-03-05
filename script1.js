@@ -1,20 +1,12 @@
-const decreaseBtn = document.getElementById('decreaseBtn');
-const increaseBtn = document.getElementById('increaseBtn');
-const resetBtn = document.getElementById('resetBtn');
-const countlabel = document.getElementById('countlabel');
-
-let count = 0;
-
-
-increaseBtn.onclick = function(){
-    count++;
-    countlabel.textContent = count;
+function countVowels(str){
+    var count = 0;
+    for(const char of str){
+        if(str === 'a' || str === 'e' || str === 'i' || str === 'o' || str === 'u'){
+            count++;
+        }
+    }
+    return count;
 }
-decreaseBtn.onclick = function(){
-    count--;
-    countlabel.textContent = count;
-}
-resetBtnBtn.onclick = function(){
-     count = 0;
-    countlabel.textContent = count;
-}
+
+const countVow = countVowels('hello');
+console.log(countVow);
